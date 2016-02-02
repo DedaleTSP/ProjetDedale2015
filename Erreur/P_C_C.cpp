@@ -17,3 +17,4 @@ std::string operator+(std::string a, P_C_C const &v)
 	std::string mess = v.toString();
 	return(a + mess);
 }
+

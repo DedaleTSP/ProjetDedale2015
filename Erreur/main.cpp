@@ -9,7 +9,8 @@ using namespace std;
 //Mingw qui a un bug connu a cet endroit, téléchargez MingW64 et utilisez le comme compilateur
 void pause()
 {
-	system("pause");// A CHANGER pour UNIX
+	system("pause");// A CHANGER pour UNIX par (ça devrait faire l'affaire)
+	//system("read"); 
 }
 
 
@@ -17,10 +18,12 @@ int main()
 {
 	cout << "Hello world!" << endl;
 
+
+	//pour UNIX: 
+	//	ErreurConv erreur({ "~/log/log.txt", 1 }); 
+	//par exemple
 	ErreurConv erreur({ "C:/log/log.txt", 1 });
 	pause();
-	// ATTENTION IL VA FALLOIR CHANGER L'ADRESSE PAR DEFAUT DU FICHIER pour la remettre sous format unix
-
 
 	erreur.logCommande("AT commande");
 	erreur.rstC();

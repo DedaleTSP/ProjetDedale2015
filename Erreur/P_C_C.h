@@ -4,7 +4,7 @@
 
 
 #include <string>
-
+#include <iostream>
 
 typedef struct P_C_C P_C_C;
 struct P_C_C//Param config conversion en AT
@@ -15,7 +15,7 @@ public:
 	std::string portDrone; // inutilisé pour l'instant
 
 
-public:	
+public:
 	std::string toString()const
 	{
 		std::string str = "Parametres de la conversion AT: \n Chemin du programme UDP :" + pathToUDPprog + "\n Ip du Drone :" + IPDrone + "\n Port du Drone :" + portDrone;
