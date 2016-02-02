@@ -21,7 +21,7 @@ void Erreur::trouve_bon_nom()
 		verif_path_txt();//inutile a priori mais ca coute pas grand chose de verifier comme on va enlever le '.txt' du nom
 
 		int j = 1;
-		string temp = param.pathEtNomLog.substr(0, param.pathEtNomLog.length() - 4) + to_string(j)+ ".txt";
+		string temp = param.pathEtNomLog.substr(0, param.pathEtNomLog.length() - 4) + std::to_string(j)+ ".txt";
 
 		ifstream Flux;
 		Flux.open(temp.c_str());
@@ -51,10 +51,10 @@ void Erreur::donne_fich_ecrivable()
 	{
 		while (!verif_path_txt())
 		{
-			
+
 		}
 
-		ifstream monFlux(param.pathEtNomLog);  //verifie si log existe deja
+		ifstream monFlux(param.pathEtNomLog.c_str());  //verifie si log existe deja
 		if (!monFlux)//si il existe pas c'est bon
 		{
 			monFlux.close();
@@ -113,11 +113,11 @@ bool Erreur::change_param(bool aff_critique, bool aff_non_usu, bool aff_tout)
 	{
 		if (aff_tout)
 		{
-			return(change_param(2)); 
+			return(change_param(2));
 		}
 		else if (aff_non_usu)
 		{
-			return(change_param(1)); 
+			return(change_param(1));
 		}
 		else if (aff_critique)
 		{
@@ -196,4 +196,3 @@ string Erreur::demande_info(string question)
 
 
 
-	
