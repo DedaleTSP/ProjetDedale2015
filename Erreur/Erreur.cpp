@@ -10,7 +10,7 @@ using namespace std;
 Erreur::Erreur(P_E_C param2)
 	{
 		param.aff = 1;
-		param.pathEtNomLog = "D:/Dedale_Test_Log/LogConv.txt";// tj initialiser au cas ou
+		param.pathEtNomLog = "~/.ARDroneFlightController/Log/LogConv.txt";// tj initialiser au cas ou
 
 		change_log(param2.pathEtNomLog);
 		change_param(param2);
