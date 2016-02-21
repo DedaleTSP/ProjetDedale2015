@@ -9,8 +9,8 @@ using namespace std;
 //Mingw qui a un bug connu a cet endroit, téléchargez MingW64 et utilisez le comme compilateur
 void pause()
 {
-	system("pause");// A CHANGER pour UNIX par (ça devrait faire l'affaire)
-	//system("read"); 
+	//system("pause");// A CHANGER pour UNIX par (ça devrait faire l'affaire)
+	system("read"); 
 }
 
 
@@ -22,7 +22,7 @@ int main()
 	//pour UNIX: 
 	//	ErreurConv erreur({ "~/log/log.txt", 1 }); 
 	//par exemple
-	ErreurConv erreur({ "C:/log/log.txt", 1 });
+	ErreurConv erreur({ "~/.ARDroneFlightController/Log/log.txt", 1 });
 	pause();
 
 	erreur.logCommande("AT commande");

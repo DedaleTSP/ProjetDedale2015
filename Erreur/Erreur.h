@@ -15,7 +15,7 @@ class Erreur// methodes de gestions et d'afficahges d'affichage dans un log
 private://variable
 	P_E_C param;//en gros c'est un int et un string et un overwrite de operator<< pour afficher le choix
 public://fonctions
-	Erreur(P_E_C param2 = { "D:/Dedale_Test_Log/LogConv.txt", 1 });
+	Erreur(P_E_C param2 = { "~/.ARDroneFlightController/Log/LogConv.txt", 1 });
 	//POUR UNIX METTRE par exemple(pas obligatoire si utilise pas le constructeur sans argument):
 	//Erreur(P_E_C param2 = { "~/Dedale_Test_Log/LogConv.txt", 1 });
 	bool change_log(std::string path);
