@@ -13,12 +13,14 @@ public:
 	std::string pathToUDPprog;
 	std::string IPDrone;
 	std::string portDrone; // inutilisé pour l'instant
+	int tempsEntreEnvois;//le temps entre 2 envois de commadnes au drone en ms
 
 
 public:
 	std::string toString()const
 	{
 		std::string str = "Parametres de la conversion AT: \n Chemin du programme UDP :" + pathToUDPprog + "\n Ip du Drone :" + IPDrone + "\n Port du Drone :" + portDrone;
+		str += "\nDt=" + std::to_string(tempsEntreEnvois) + " ms";
 		return(str);
 	}
 };

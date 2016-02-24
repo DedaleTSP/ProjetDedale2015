@@ -6,6 +6,12 @@
 *.exe
 *.o
 *.so
+*.obj
+*.vcxproj
+*.vcxproj.*
+*.tlog
+*.idb
+*.pdb
 
 # Packages #
 ############

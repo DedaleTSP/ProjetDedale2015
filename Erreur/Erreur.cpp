@@ -147,9 +147,13 @@ bool Erreur::Log(string const mess, int const priorite)
 			return false;
 		}
 
+
+		/*
 		affiche_direct("\n*********************************************************");
 		affiche_direct("dans:" + param.pathEtNomLog+"\non logue : \n\n" + prio+mess );
 		affiche_direct("*********************************************************\n");
+		*/
+
 
 		ofstream LOG(param.pathEtNomLog.c_str(), ios::app);
 		if (LOG)

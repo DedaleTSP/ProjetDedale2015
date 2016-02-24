@@ -1,3 +1,7 @@
+#ifndef DEF_CtPD
+#define DEF_CtPD
+
+
 #include <iostream>
 #include <fstream>
 
@@ -24,3 +28,5 @@ public:
 	std::string toString()const;
 };
 std::ostream &operator<<(std::ostream & flux, CartToPolDegree const & v);
+
+#endif
