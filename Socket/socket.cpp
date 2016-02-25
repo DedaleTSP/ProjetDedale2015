@@ -31,6 +31,6 @@ std::string Socket::Listen()
 
 void Socket::Send(std::string message)
 {
-	sprintf(buf, "%s", message);
+	sprintf(buf, "%s", message.c_str());
 	sendto(s, buf, BUFFERLENGTH, 0, (struct sockaddr *)&socketOther, (socklen_t)slen);
 }
