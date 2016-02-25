@@ -22,12 +22,7 @@ class Socket
 		
 		void Connect();
 		void Close();
-		void Listen();
+		std::string Listen();
 		void Send(std::string message);
 
 };
-
-int main()
-{
-	return 0;
-}

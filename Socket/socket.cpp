@@ -23,11 +23,14 @@ void Socket::Close()
 {
 	close(s);
 }
-void Socket::Listen()
+std::string Socket::Listen()
 {
 	recvfrom(s, buf, BUFFERLENGTH, 0, (struct sockaddr *)&socketOther, (socklen_t*)&slen);
+	return buf;
 }
+
 void Socket::Send(std::string message)
 {
+	sprintf(buf, "%s", message);
 	sendto(s, buf, BUFFERLENGTH, 0, (struct sockaddr *)&socketOther, (socklen_t)slen);
 }
